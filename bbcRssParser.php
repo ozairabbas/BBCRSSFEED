@@ -121,31 +121,31 @@ EOD;
 	/**
 	 * Class Setters
 	 */
-	public function setFeedLink($value) { 
+	protected function setFeedLink($value) { 
 		$this->feedLink = $value; 
 	} 
 	
-	public function setFeedTitle($value) { 
+	protected function setFeedTitle($value) { 
 		$this->feedTitle = $value; 
 	} 
 
-	public function setFeedDescription($value) { 
+	protected function setFeedDescription($value) { 
 		$this->feedDescription = $value; 
 	} 
 
-	public function setFeedLanguage($value) { 
+	protected function setFeedLanguage($value) { 
 		$this->feedLanguage = $value; 
 	} 
 
-	public function setFeedLastBuildDate($value) { 
+	protected function setFeedLastBuildDate($value) { 
 		$this->feedLastBuildDate = $value; 
 	} 
 
-	public function setFeedCopyright($value) { 
+	protected function setFeedCopyright($value) { 
 		$this->feedCopyright = $value; 
 	} 
 	
-	public function setFeedImage($value) {
+	protected function setFeedImage($value) {
 		$this->feedImage["url"] = (string)$value->url;
 		$this->feedImage["title"] = (string)$value->title;
 		$this->feedImage["link"] = (string)$value->link;
@@ -153,11 +153,11 @@ EOD;
 		$this->feedImage["height"] = (int)$value->height;
 	}
 	
-	public function setFeedCount($value) {
+	protected function setFeedCount($value) {
 		$this->feedCount = $value;
 	}
 	
-	public function setRssFeedArray($value) {
+	protected function setRssFeedArray($value) {
 		$namespace = "http://search.yahoo.com/mrss/";	
 		$array = array();
 		$count = 0;

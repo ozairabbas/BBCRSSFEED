@@ -36,6 +36,8 @@ try {
 	} else {
 		echo "error";
 	}
+	
+	unset($rssFeedObj);
 } catch(Exception $e) {
 	echo "<h1>" . $e->getMessage() . " <a href='index.php'>Click here to try again</a></h1> ";
 	echo "<h2>You can try other rss news feeds starting with " . bbcRssParser::BASEURL . "</h2>";

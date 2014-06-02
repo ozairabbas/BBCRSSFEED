@@ -57,7 +57,7 @@ try {
 		(function updaterss() {
 			var rssFeedUrl = $('#submitedUrl').val();
 			var rssSortOrder = $('#sortorder').val();
-			var refreshRate = 60; //seconds
+			var refreshRate = 5; //seconds
 		
 			$.ajax({
 				type: "POST",
@@ -155,6 +155,9 @@ try {
 </html>
 
 <?php 
+#Destroy the RSS Feed object
+unset($rssFeedObj);
+
 } catch (Exception $e) {
 	echo "<h1>" . $e->getMessage() . " <a href='index.php'>Click here to try again</a></h1> ";
 	echo "<h2>You can try other rss news feeds starting with " . bbcRssParser::BASEURL . "</h2>";
